@@ -1,0 +1,21 @@
+.highlight {
+    background-position: center;
+    background-size: cover;
+    width: 99.5%;
+    height: 60vh;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+
+.highlight-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 400px;
+    text-shadow: 10px;
+    gap: 15px;
+    text-shadow: 4px 4px 8px #000000;
+}

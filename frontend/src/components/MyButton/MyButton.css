@@ -1,0 +1,59 @@
+.my-button {
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+  }
+  .my-button div {
+    /* padding: 1.2rem 5.5rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .my-button a {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ece8e1;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  
+  .my-button::before,
+  .my-button::after {
+    content: "";
+    position: absolute;
+    width: 105%;
+    height: 50%;
+    background-color: transparent;
+    left: -2.5%;
+    z-index: -1;
+  }
+  
+  .my-button::before {
+    border-bottom: 0;
+    top: -10%;
+  }
+  .my-button::after {
+    border-top: 0;
+    bottom: -10%;
+  }
+  
+  .my-button span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 110%;
+    background-color: rgb(15, 25, 35);
+    transform: translateX(-105%) skew(-10deg);
+    transition: 0.4s ease;
+  }
+  
+  .my-button:hover span {
+    transform: translateX(-5%) skew(-10deg);
+  }

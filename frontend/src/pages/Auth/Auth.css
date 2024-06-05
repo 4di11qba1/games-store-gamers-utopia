@@ -1,0 +1,69 @@
+.Auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  gap: 4rem;
+  position: relative;
+}
+
+/* .auth-image {
+  display: flex;
+} */
+
+@media screen and (max-width: 1100px) {
+  .Auth {
+    flex-direction: column;
+  }
+  .auth-card {
+    width: 80vw !important;
+  }
+  .authForm {
+    width: 80vw !important;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .auth-image {
+    display: none !important;
+  }
+}
+
+.Auth > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* left side */
+.a-left{
+    gap: 2rem;
+}
+
+.a-left > img {
+  width: 4rem;
+  height: 4rem;
+}
+
+
+
+/* right side */
+
+
+.authForm{
+    /* background-color: var(--cardColor); */
+    border-radius: 1rem;
+    padding: 25px;
+    width: 30vw;
+}
+
+.authForm>div{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px;
+}

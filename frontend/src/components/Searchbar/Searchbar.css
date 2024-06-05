@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+#searchForm {
+  position: relative;
+  width: 30vw;
+  background: var(--color-bg);
+  border-radius: var(--rad);
+  color: var(--font-color);
+}
+#search,
+#searchButton {
+  height: var(--height);
+  font-family: var(--font-fam);
+  border: 0;
+  color: var(--color-dark);
+}
+#search {
+  outline: 0;
+  width: 100%;
+  background: var(--color-bg);
+  padding: 0 1.6rem;
+  border-radius: var(--rad);
+  appearance: none;
+  transition: all var(--dur) var(--bez);
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+}
+#searchButton {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--btn-width);
+  font-weight: bold;
+  background: var(--color-bg);
+  border-radius: 0 var(--rad) var(--rad) 0;
+}
+#search:not(:placeholder-shown) {
+  border-radius: var(--rad) 0 0 var(--rad);
+  width: calc(100% - var(--btn-width));
+}
+#search:not(:placeholder-shown) + button {
+  display: block;
+}
+#searchLabel {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}

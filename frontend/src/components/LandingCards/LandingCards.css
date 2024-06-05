@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lc-wrapper {
+    width: 94vw;
+    margin-left: 1vw;
+    height: 80vh;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.lc-wrapper::-moz-scrollbar {
+    display: none;
+}
+
+.lc-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.lc-container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.lc-card {
+    width: 310px;
+    height: 600px;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.lc-card > .lc-row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: 25px;
+    transform: translateY(-160px);
+}
+
+.lc-card > .lc-row > .lc-icon {
+    /* background: #223; */
+    color: white;
+    border-radius: 50%;
+    transform: translateX(-65px);
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.lc-input:not(:checked) + label .lc-row > .lc-icon {
+    opacity: 0;
+}
+
+.lc-card > .lc-row > .lc-description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.lc-description p {
+    color: #ffffff;
+    padding-top: 5px;
+    text-shadow: 4px 4px 8px #000000;
+}
+
+.lc-description h1 {
+    text-shadow: 4px 4px 8px #000000;
+}
+
+.lc-input {
+    display: none;
+}
+
+@media screen and (min-width: 1000px) {
+    .lc-input:checked + label {
+        width: 1000px;
+        height: 600px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 999px) {
+    .lc-container {
+        margin-left: 330px;
+    }
+    
+    .lc-input:checked + label {
+        width: 80vw;
+    }
+}
+
+.lc-input:checked + label .lc-description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
